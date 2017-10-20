@@ -7,9 +7,12 @@
 @import "partials/_reset.scss";
 @import "partials/_variables.scss";
 @import "partials/_typography.scss";
+@import "partials/rem.scss";
 @import "partials/_functions.scss";
 @import "partials/_mixins.scss";
+@import "partials/_flex.scss";
 @import "modules/_buttons.scss";
+
 
 /* Defaults */
 
@@ -25,7 +28,7 @@ html {
 
 body {
     position: relative;
-    font: normal calculateRem(18px) $sans-serif;
+    font: normal rem(18px) $sans-serif;
     color: $black;
     line-height: 2;
 }
@@ -59,30 +62,30 @@ a {
 /* Typography */
 
 h1 {
-    font: 700 calculateRem(80px) $sans-serif;
+    font: 700 rem(80px) $sans-serif;
 }
 h2 {
-    font: 700 calculateRem(50px) $cursive;
+    font: 700 rem(50px) $cursive;
 }
 h3 {
-    font: 700 calculateRem(35px) $sans-serif;
+    font: 700 rem(35px) $sans-serif;
 }
 h4 {
-    font: 700 calculateRem(60px) $cursive;
+    font: 700 rem(60px) $cursive;
     text-align: center;
 }
 h5 {
-    font: 400 calculateRem(20px) $serif;
+    font: 400 rem(20px) $serif;
     text-align: center;
-    padding: calculateRem(18px) 0 calculateRem(40px);
+    padding: rem(18px) 0 rem(40px);
 }
 p {
-    font: 400 calculateRem(18px) $sans-serif;
+    font: 400 rem(18px) $sans-serif;
 }
 .line {
-    height: calculateRem(1px);
+    height: rem(1px);
     background-color: $light-gray;
-    margin: calculateRem(20px) 0;
+    margin: rem(20px 0);
     @include box-shadow(0 0 10px black(.1));
 }
 strong {
@@ -93,8 +96,8 @@ hr {
     background-color: $red;
     border: none;
     width: 40%;
-    height: calculateRem(1px);
-    margin: calculateRem(20px) auto;
+    height: rem(1px);
+    margin: rem(20px auto);
 }
 
 /* Reusable Blocks */
@@ -107,8 +110,8 @@ section {
 .container {
     width: 100%;
     margin: 0 auto;
-    max-width: calculateRem(1165px);
-    padding: calculateRem(90px) 0;    
+    max-width: rem(1165px);
+    padding: rem(90px 0);    
 }
 .flexible {
     @include flexbox();
@@ -138,9 +141,9 @@ section {
         display: inline;
         background-color: black(.7); 
         z-index: 2;
-        max-width: calculateRem(293px);
+        max-width: rem(293px);
         width: 82%;
-        max-height: calculateRem(305px);
+        max-height: rem(305px);
         height: 74%;
         top: 0;
         left: 0;
@@ -154,8 +157,8 @@ section {
             margin-top: 8%;
         }
         .price {
-            font-size: calculateRem(30px);
-            margin: calculateRem(5px) auto;
+            font-size: rem(30px);
+            margin: rem(5px auto);
         }
         .btn-small {
             margin: 0 auto;
@@ -164,9 +167,9 @@ section {
  
     .grid-image {  
         position: relative;
-        max-width: calculateRem(293px);
-        max-height: calculateRem(305px); 
-                    overflow: hidden; 
+        max-width: rem(293px);
+        max-height: rem(305px); 
+        overflow: hidden; 
         img {
             width: 100%;
             height: 100%;
@@ -180,7 +183,6 @@ section {
             @include opacity(1);
             @include transition(all .3s ease-in-out);
             padding: 10%;
-
         }
 
     }    
@@ -208,12 +210,12 @@ section {
 
 .info-block {
     background-color: $white;
-    padding: calculateRem(10px) 0;
+    padding: rem(10px 0);
     color: black(.4);
     font-weight: bold;
     
     .social i:first-child() {
-        padding-left: 10px;
+        padding-left: rem(10px);
     }
 }
 .f-center {
@@ -232,24 +234,24 @@ header {
     @include opacity(0);
 
     .logo {
-        margin-top: calculateRem(-20px);
+        margin-top: rem(-20px);
         color: base(1);
         text-align: center;
         span {
-            font: 700 calculateRem(20px) $sans-serif;  
+            font: 700 rem(20px) $sans-serif;  
             display: block;      
             text-transform: uppercase;
         }
         img {
             position: relative;
-            top: calculateRem(5px);
-            width: calculateRem(31px);
+            top: rem(5px);
+            width: rem(31px);
         }
     }
     nav {
         background-color: black(.7);
         a {
-            padding: calculateRem(10px) 0;
+            padding: rem(10px 0);
             color: white(.8);
             text-decoration: none;
             @include transition(all .3s ease-in-out);
@@ -268,7 +270,7 @@ header {
     min-height: 100vh;
     color: $black;
     animation: 1s slidefade 1s forwards;
-    padding-top: calculateRem(150px);
+    padding-top: rem(150px);
     overflow: hidden;
     .aside {
       
@@ -277,25 +279,25 @@ header {
     h1 {
         color: $red;
         text-align: center;
-        text-shadow: 2px 2px 2px black(.8);
+        text-shadow: rem(2px 2px 2px black(.8));
         padding-top: 20%;
         padding-bottom: 0;
-        //border-bottom: 2px solid $red;
+        //border-bottom: rem(2px solid $red);
     }
     h3.slogan {
         color: white(1);        
-        padding: calculateRem(8px) calculateRem(15px);
-        text-shadow: 2px 2px 2px black(.8);
+        padding: rem(8px 15px);
+        text-shadow: rem(2px 2px 2px black(.8));
         background-color: black(.5);
     }
     h3.second {
         color: $white;
         display: none;        
         text-transform: uppercase;
-        padding: calculateRem(8px) calculateRem(15px);
+        padding: rem(8px 15px);
         position: relative;
-        top: -12px;
-        text-shadow: 2px 2px 2px black(.8);
+        top: rem(-12px);
+        text-shadow: rem(2px 2px 2px black(.8));
         background-color: black(.5);
     }
     .btn-default {
@@ -310,7 +312,7 @@ header {
     min-height: 100vh;
     color: $black;
     animation: 1s slidefade 1s forwards;
-    padding-top: calculateRem(150px);
+    padding-top: rem(150px);
     @include opacity(.3);
     overflow: hidden;
 
@@ -318,17 +320,17 @@ header {
 
     }
     h4 {
-        margin-bottom: calculateRem(5px);
+        margin-bottom: rem(5px);
         color: $red;
     }
     .menu-nav {
         li p {
             cursor:pointer;
-            font-size: calculateRem(15px);
+            font-size: rem(15px);
             font-weight: 700;
             color: $red;
             background-color: black(.5);
-            margin-bottom: calculateRem(5px) calculateRem(5px);
+            margin-bottom: rem(5px);
         }
     }
     .items p,
@@ -347,8 +349,8 @@ header {
         justify-content: space-between;
     }
     .side-note {
-        padding: 0 0 calculateRem(10px);
-        font-size: calculateRem(15px);
+        padding: rem(0 0 10px);
+        font-size: rem(15px);
         color: $meta-gray;
         font-family: $serif;
         font-style: italic;
@@ -361,45 +363,45 @@ header {
             width: 70%;
         }
         &.pricing {
-            margin-top: calculateRem(15px);
+            margin-top: rem(15px);
             p {
                 @include flexbox();
                 align-items: center;
                 justify-content: space-between;
 
                 span:first-child() {
-                    // /font-size: calculateRem(14px);
-                    margin-right: calculateRem(30px);
+                    // /font-size: rem(14px);
+                    margin-right: rem(30px);
                 }
             }                 
         }  
     }
     .intro {
         text-align: center;
-        margin-bottom: calculateRem(30px);
+        margin-bottom: rem(30px);
     }
     .border {
         border-image: url(../img/border.png) 25 25 round;
     }
     .white-wrap {
         background-color: $white;
-        margin: calculateRem(30px) auto;
+        margin: rem(30px) auto;
         display: block;
         width: 80%;
         padding: 5%;
     }
     .spicy {
-        width: calculateRem(20px);
-        height: calculateRem(20px);
+        width: rem(20px);
+        height: rem(20px);
         display: inline-block;
         background: transparent url(../img/pepper.png) 0 0 no-repeat;
-        background-size: calculateRem(20px) calculateRem(20px);
+        background-size: rem(20px 20px);
         background-position: 0 0;
         position: relative;
-        top: calculateRem(5px);
+        top: rem(5px);
         /*
-        left: calculateRem(-20px);
-        margin-right: calculateRem(-20px)
+        left: rem(-20px);
+        margin-right: rem(-20px)
         */
     }
 }
@@ -416,39 +418,39 @@ footer {
         display: block;
         width: 100%;
         background-color: $red;
-        padding: calculateRem(30px) 0;
-        font-size: calculateRem(30px);
+        padding: rem(30px 0);
+        font-size: rem(30px);
         text-align: center;
     }    
     .footer-content {
 
-        padding: calculateRem(50px) 0;
+        padding: rem(50px 0);
         text-align: center;
         div {
-            //width: calculateRem(400px);
+            //width: rem(400px);
         }
         h5 {
-            font: 700 calculateRem(40px) $cursive;
+            font: 700 rem(40px) $cursive;
             padding: 0;
             line-height: 1.4;
-            margin-bottom: calculateRem(20px);
-            border-bottom: calculateRem(2px) solid $red;
+            margin-bottom: rem(20px);
+            border-bottom: rem(2px solid $red);
         }
         .days {
             font-family: $serif;
             font-weight: 700;
-            padding-bottom: calculateRem(5px);
+            padding-bottom: rem(5px);
             &.extra {
-                padding-bottom: calculateRem(20px);
+                padding-bottom: rem(20px);
             }
         } 
         .time {
-            font-size: calculateRem(16px);
+            font-size: rem(16px);
             line-height: 1.7;
         }
         .working-hours {
             .time {
-                padding-bottom: calculateRem(20px);
+                padding-bottom: rem(20px);
             }
         }
     }          

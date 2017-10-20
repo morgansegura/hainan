@@ -1,5 +1,5 @@
 /*
-  Stylesheet: Buttons
+  Buttons
 */
 
 %btn {
@@ -11,13 +11,13 @@
   border: 0;
   cursor: pointer;
   @include transition(all 0.14s ease-in-out);
-  @include border-radius(calculateRem(5px));
+  @include border-radius(rem(5px));
   &:hover, &:focus {
     text-decoration: none;
     outline: none;
   } 
   &:active {
-    top: calculateRem(1px);
+    top: rem(1px);
   }
 }
 
@@ -27,12 +27,12 @@
   @extend %btn;
   background-color: $red;
   border: none;
-  margin-top: calculateRem(10px);
-  padding: calculateRem(5px) calculateRem(10px);
+  margin-top: rem(10px);
+  padding: rem(5px 10px);
   color: $white;
-  font: 400 calculateRem(14px) $serif;
+  font: 400 rem(14px) $serif;
   border: 1px solid transparent;
-  text-shadow: 2px 2px 2px black(.9);
+  text-shadow: rem(2px 2px 2px black(.9));
   &:hover, 
   .selected {
     background-color: darken($red, 9%);
@@ -46,8 +46,8 @@
   //border: none;
 
   //top: 0px;
-  padding: calculateRem(20px) 0 0 calculateRem(20px);
-  font-size: calculateRem(30px);
+  padding: rem(20px 0 0 20px);
+  font-size: rem(30px);
   border: 1px solid transparent;
   &:hover, 
   &:active {
@@ -62,9 +62,9 @@
   @extend %btn;
   background-color: $red;
   color: $white;
-  font: bold calculateRem(18px) $sans-serif;
-  padding: calculateRem(10px) calculateRem(60px);
-  line-height: calculateRem(45px);
+  font: bold rem(18px) $sans-serif;
+  padding: rem(10px 60px);
+  line-height: rem(45px);
 	@include transition(all 0.5s);
 	position: relative;
 	overflow: hidden;
@@ -74,6 +74,7 @@
   &:hover,
   &:focus {
     @include transform(translate(0, 0));
+    color: $white;
 
     &:after {
       @include opacity(1);

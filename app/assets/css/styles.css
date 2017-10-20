@@ -4,9 +4,7 @@
   Stylesheet: Main
 */
 /*
-  Site Name: DNA Custom Painting
-  Author: Morgan Segura
-  Stylesheet: Reset
+  CSS Reset
 */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -57,12 +55,12 @@ table {
   border-spacing: 0; }
 
 /*
-  Stylesheet: Variables
+  Variables
 */
 /* COLORS */
 /* Base Colors */
 /*
-  Stylesheet: Typography
+  Typography
 */
 p {
   -ms-word-wrap: break-word;
@@ -81,16 +79,11 @@ p {
   font-feature-settings: "liga", "dlig"; }
 
 /*
-  Site Name: DNA Custom Painting
-  Author: Morgan Segura
-  Stylesheet: Functions
+    Functions
 */
 /* COLOR FUNCTIONS */
-/* Calculate Rem Size */
 /*
-  Site Name: DNA Custom Painting
-  Author: Morgan Segura
-  Stylesheet: Mixins
+ 	Mixins
 */
 /* Transition */
 /* Transform */
@@ -115,32 +108,254 @@ USEAGE:
 /* Border Radius */
 /* Opacity */
 /* Opacity */
-/* Calculate REM size */
-/* Flexbox */
-/* 
-http://webdesignerwall.com/tutorials/master-css-flexbox-5-simple-steps
+/* Flex Grid */
+.grid {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0; }
 
-flex-flow: flex-direction | flex-wrap;
+.grid-cell {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1; }
 
-flex-direction: row | row-reverse | column | column-reverse;
+.grid-flex-cells > .grid-cell {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; }
 
-flex-wrap: nowrap | wrap | wrap-reverse;
+.grid-top {
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  align-items: flex-start; }
 
-justify-content: flex-start | flex-end | center | space-between | space-around;
+.grid-bottom {
+  -webkit-align-items: flex-end;
+  -moz-align-items: flex-end;
+  -ms-align-items: flex-end;
+  align-items: flex-end; }
 
-align-items: flex-start | flex-end | center | baseline | stretch; 
+.grid-center {
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center; }
 
-align-content: flex-start | flex-end | center | space-between | space-around | stretch
+.grid-justify-center {
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center; }
 
-flex: flex-grow || flex-shrink || flex-basis;
+.grid-cell-top {
+  -webkit-align-self: flex-start;
+  -moz-align-self: flex-start;
+  -ms-align-self: flex-start;
+  align-self: flex-start; }
 
-align-self: auto | flex-start | flex-end | center | baseline | stretch
+.grid-cell-bottom {
+  -webkit-align-self: flex-end;
+  -moz-align-self: flex-end;
+  -ms-align-self: flex-end;
+  align-self: flex-end; }
 
-order: number;
+.grid-cell--center {
+  -webkit-align-self: center;
+  -moz-align-self: center;
+  -ms-align-self: center;
+  align-self: center; }
 
+.grid-cell--autosize {
+  -webkit-box-flex: none;
+  -moz-box-flex: none;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none; }
+
+.grid-fit > .grid-cell {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1; }
+
+.grid-full > .grid-cell {
+  -webkit-box-flex: 0 0 100%;
+  -moz-box-flex: 0 0 100%;
+  -webkit-flex: 0 0 100%;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%; }
+
+.grid-half > .grid-cell {
+  -webkit-box-flex: 0 0 50%;
+  -moz-box-flex: 0 0 50%;
+  -webkit-flex: 0 0 50%;
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%; }
+
+.grid-third > .grid-cell {
+  -webkit-box-flex: 0 0 33.3333%;
+  -moz-box-flex: 0 0 33.3333%;
+  -webkit-flex: 0 0 33.3333%;
+  -ms-flex: 0 0 33.3333%;
+  flex: 0 0 33.3333%; }
+
+.grid-quarter > .grid-cell {
+  -webkit-box-flex: 0 0 25%;
+  -moz-box-flex: 0 0 25%;
+  -webkit-flex: 0 0 25%;
+  -ms-flex: 0 0 25%;
+  flex: 0 0 25%; }
+
+.grid-gutters {
+  margin: -1rem 0 1rem -1rem; }
+
+.grid-gutters > .grid-cell {
+  padding: 1rem 0 0 1rem; }
+
+.grid-gutters-lg {
+  margin: -1.5rem 0 1.5rem -1.5rem; }
+
+.grid-gutters-lg > .grid-cell {
+  padding: 1.5rem 0 0 1.5rem; }
+
+.grid-gutters-xl {
+  margin: -2rem 0 2rem -2rem; }
+
+.grid-gutters-xl > .grid-cell {
+  padding: 2rem 0 0 2rem; }
+
+@media (--break-sm) {
+  .small-grid-fit > .grid-cell {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1; }
+  .small-grid-full > .grid-cell {
+    -webkit-box-flex: 0 0 100%;
+    -moz-box-flex: 0 0 100%;
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%; }
+  .small-grid-half > .grid-cell {
+    -webkit-box-flex: 0 0 50%;
+    -moz-box-flex: 0 0 50%;
+    -webkit-flex: 0 0 50%;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%; }
+  .small-grid-third > .grid-cell {
+    -webkit-box-flex: 0 0 33.3333%;
+    -moz-box-flex: 0 0 33.3333%;
+    -webkit-flex: 0 0 33.3333%;
+    -ms-flex: 0 0 33.3333%;
+    flex: 0 0 33.3333%; }
+  .small-grid-quarter > .grid-cell {
+    -webkit-box-flex: 0 0 25%;
+    -moz-box-flex: 0 0 25%;
+    -webkit-flex: 0 0 25%;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%; }
+  .small-grid-gutters {
+    margin: -1rem 0 1rem -1rem; }
+  .small-grid-gutters > .grid-cell {
+    padding: 1rem 0 0 1rem; }
+  .small-grid-gutters-lg {
+    margin: -1.5rem 0 1.5rem -1.5rem; }
+  .small-grid-gutters-lg > .grid-cell {
+    padding: 1.5rem 0 0 1.5rem; }
+  .small-grid-gutters-xl {
+    margin: -2rem 0 2rem -2rem; }
+  .small-grid-gutters-xl > .grid-cell {
+    padding: 2rem 0 0 2rem; } }
+
+/*
+@media (--break-md) {
+    .med-grid-fit > .grid-cell {
+        @include flex(1);
+    }
+    .med-grid-full > .grid-cell {
+        @include flex(0 0 100%);
+    }
+    .med-grid-half > .grid-cell {
+        @include flex(0 0 50%);
+    }
+    .med-grid-third > .grid-cell {
+        @include flex(0 0 33.3333%);
+    }
+    .med-grid-quarter > .grid-cell {
+        @include flex(0 0 25%);
+    }    
+    .med-grid-gutters {
+        margin: rem(-16px 0 16px -16px);
+    }
+    .med-grid-gutters > .grid-cell {
+        padding: rem(16px 0 0 16px);
+    }
+    .med-grid-gutters-lg {
+        margin: rem(-24px 0 24px -24px);
+    }
+    .med-grid-gutters-lg > .grid-cell {
+        padding: rem(24px 0 0 24px);
+    }
+    .med-grid-gutters-xl {
+        margin: rem(-32px 0 32px -32px);
+    }
+    .med-grid-gutters-xl > .grid-cell {
+        padding: rem(32px 0 0 32px);
+    }
+}
+
+@media (--break-lg) {
+    .large-grid-fit > .grid-cell {
+        @include flex(1);
+    }
+    .large-grid-full > .grid-cell {
+        @include flex(0 0 100%);
+    }
+    .large-grid-half > .grid-cell {
+        @include flex(0 0 50%);
+    }
+    .large-grid-third > .grid-cell {
+        @include flex(0 0 33.3333%);
+    }
+    .large-grid-quarter > .grid-cell {
+        @include flex(0 0 25%);
+    }    
+    .large-grid-gutters {
+        margin: rem(-16px 0 16px -16px);
+    }
+    .large-grid-gutters > .grid-cell {
+        padding: rem(16px 0 0 16px);
+    }
+    .large-grid-gutters-lg {
+        margin: -24px 0 24px -24px;
+    }
+    .large-grid-gutters-lg > .grid-cell {
+        padding: rem(24px 0 0 24px);
+    }
+    .large-grid-gutters-xl {
+        margin: rem(-32px 0 32px -32px);
+    }
+    .large-grid-gutters-xl > .grid-cell {
+        padding: rem(32px 0 0 32px);
+    }
+}
 */
 /*
-  Stylesheet: Buttons
+  Buttons
 */
 .btn-small, .btn-default {
   display: inline-block;
@@ -174,7 +389,7 @@ order: number;
   color: #fff;
   font: 400 0.875rem "Artifika", "Georgia", Cambria, Times New Roman, Times, serif;
   border: 1px solid transparent;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9); }
+  text-shadow: 0.125rem 0.125rem 0.125rem rgba(0, 0, 0, 0.9); }
   .btn-small:hover,
   .btn-small .selected {
     background-color: #9e0000; }
@@ -210,7 +425,8 @@ order: number;
     -moz-transform: translate(0, 0);
     -o-transform: translate(0, 0);
     -ms-transform: translate(0, 0);
-    transform: translate(0, 0); }
+    transform: translate(0, 0);
+    color: #fff; }
     .btn-default:hover:after, .btn-default:focus:after {
       filter: alpha(opactiy=100);
       -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opactiy=100)";
@@ -469,7 +685,7 @@ section {
   color: rgba(0, 0, 0, 0.4);
   font-weight: bold; }
   .info-block .social i:first-child {
-    padding-left: 10px; }
+    padding-left: 0.625rem; }
 
 .f-center {
   text-align: center; }
@@ -529,13 +745,13 @@ header {
   .hero h1 {
     color: #cc0000;
     text-align: center;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+    text-shadow: 0.125rem 0.125rem 0.125rem rgba(0, 0, 0, 0.8);
     padding-top: 20%;
     padding-bottom: 0; }
   .hero h3.slogan {
     color: white;
     padding: 0.5rem 0.9375rem;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+    text-shadow: 0.125rem 0.125rem 0.125rem rgba(0, 0, 0, 0.8);
     background-color: rgba(0, 0, 0, 0.5); }
   .hero h3.second {
     color: #fff;
@@ -543,8 +759,8 @@ header {
     text-transform: uppercase;
     padding: 0.5rem 0.9375rem;
     position: relative;
-    top: -12px;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+    top: -0.75rem;
+    text-shadow: 0.125rem 0.125rem 0.125rem rgba(0, 0, 0, 0.8);
     background-color: rgba(0, 0, 0, 0.5); }
   .hero .btn-default {
     margin: 10% auto;
@@ -572,7 +788,7 @@ header {
     font-weight: 700;
     color: #cc0000;
     background-color: rgba(0, 0, 0, 0.5);
-    margin-bottom: 0.3125rem 0.3125rem; }
+    margin-bottom: 0.3125rem; }
   .full-menu .items p,
   .full-menu .bordered p {
     font-family: "Artifika", "Georgia", Cambria, Times New Roman, Times, serif;
@@ -632,8 +848,8 @@ header {
     position: relative;
     top: 0.3125rem;
     /*
-        left: calculateRem(-20px);
-        margin-right: calculateRem(-20px)
+        left: rem(-20px);
+        margin-right: rem(-20px)
         */ }
 
 /* Footer Section */
@@ -870,27 +1086,25 @@ footer {
     margin-top: 0; } }
 
 /*
-  Site Name: DNA Custom Painting
-  Author: Morgan Segura
-  Stylesheet: Media Queries
+    Media Queries
 */
-@media all and (max-width: 800px) {
+@media all and (max-width: 50rem) {
   /* Header */
   /* Section */
   /* Hero Section */ }
 
-@media all and (max-width: 1024px) {
+@media all and (max-width: 64rem) {
   .hero {
     /*
         .container {
             text-align: center;
             flex-flow: row wrap;
-            padding: calculateRem(20px);
+            padding: rem(20px);
             h1 {
                 padding-right: 0;
             }
             h3 {
-                margin-bottom: calculateRem(20px);
+                margin-bottom: rem(20px);
             }
             .img {
                 margin: 0 auto;

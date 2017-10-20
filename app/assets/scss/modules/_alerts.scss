@@ -1,14 +1,12 @@
 /*
-  Site Name: DNA Custom Painting
-  Author: Morgan Segura
-  Stylesheet: Alerts
+  Alerts
 */
 
 // alerts and notices
 %alert {
   margin: 10px;
-  padding: 5px 18px;
-  border: 1px solid;
+  padding: rem(5px) rem(18px);
+  border: rem(1px) solid;
 }
 
 .alert-help {

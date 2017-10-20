@@ -1,7 +1,5 @@
 /*
-  Site Name: DNA Custom Painting
-  Author: Morgan Segura
-  Stylesheet: Functions
+    Functions
 */
 
 /* COLOR FUNCTIONS */
@@ -19,11 +17,4 @@
 // red
 @function base($opacity) {
     @return rgba(255,0,0,$opacity);
-}
-
-/* Calculate Rem Size */
-
-@function calculateRem($size){
-	$remSize: $size / 16px;
-	@return $remSize * 1rem;
 }

@@ -1,7 +1,5 @@
 /*
-  Site Name: DNA Custom Painting
-  Author: Morgan Segura
-  Stylesheet: Typography
+  Forms
 */
 
 /* Inputs */
@@ -24,18 +22,18 @@ select,
 textarea,
 .field {
   display: block;
-  height: 40px;
-  line-height: 1em;
-  padding: 0 12px;
-  margin-bottom: 14px;
-  font-size: 1em;
+  height: rem(40px);
+  line-height: rem(16px);
+  padding: rem(0 12px);
+  margin-bottom: rem(14px);
+  font-size: rem(16px);
   color: $text-color;
-  border-radius: 3px;
+  border-radius: rem(3px);
   vertical-align: middle;
   box-shadow: none;
   border: 0;
   width: 100%;
-  max-width: 400px;
+  max-width: rem(400px);
   font-family: $lato;
   background-color: $gray;
   @include transition(background-color 0.24s ease-in-out);
@@ -89,14 +87,14 @@ textarea,
 
 // spacing out the password (thx @murtaugh)
 input[type="password"] {
-  letter-spacing: 0.3em;
+  letter-spacing: rem(5px);
 }
 
 // textareas
 textarea {
   max-width: 100%;
-  min-height: 120px;
-  line-height: 1.5em;
+  min-height: rem(120px);
+  line-height: rem(24px);
 }
 
 // selects
