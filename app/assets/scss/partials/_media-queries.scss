@@ -1,0 +1,115 @@
+/*
+  Site Name: DNA Custom Painting
+  Author: Morgan Segura
+  Stylesheet: Media Queries
+*/
+
+
+@media all and (max-width: 800px) {
+
+    /* Header */
+
+    header {
+
+        h2 {
+
+        }          
+    }  
+
+    /* Section */
+
+    section {
+
+    }
+
+    /* Hero Section */
+
+    .hero {
+
+        h1 {
+
+        }
+        h3 {
+
+        }
+    }
+        
+}
+
+
+@media all and (max-width: 1000px) {
+
+
+    .hero {
+        .aside {
+
+        }
+        
+        img {
+
+        }
+    }
+}
+
+@media all and (max-width: 1024px) {
+    .container {
+        //padding: calculateRem(40px);              
+    }
+    header.container, 
+    .hero .container,
+    .team .container,
+    .stats .container,
+    .descriptions .container,
+    footer.container  {
+        //max-width: calculateRem(800px);
+    }
+    .hero  {
+        /*
+        .container {
+            text-align: center;
+            flex-flow: row wrap;
+            padding: calculateRem(20px);
+            h1 {
+                padding-right: 0;
+            }
+            h3 {
+                margin-bottom: calculateRem(20px);
+            }
+            .img {
+                margin: 0 auto;
+                order: -1;
+            }
+            img {
+                width: 100%;
+            }
+        }
+        div.social {
+            position: relative;
+            padding: 0;
+        }
+        */
+    }
+    .team .container {
+        
+    }
+    .stats .container {
+        
+    }
+    .descriptions .container {
+        
+    }
+
+
+    /* Footer */
+
+    footer {
+  
+        p {
+
+        }
+        ul li {
+  
+        }
+    }
+
+}

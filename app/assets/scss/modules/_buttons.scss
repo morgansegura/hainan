@@ -1,0 +1,111 @@
+/*
+  Stylesheet: Buttons
+*/
+
+%btn {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  font-weight: normal;
+  border: 0;
+  cursor: pointer;
+  @include transition(all 0.14s ease-in-out);
+  @include border-radius(calculateRem(5px));
+  &:hover, &:focus {
+    text-decoration: none;
+    outline: none;
+  } 
+  &:active {
+    top: calculateRem(1px);
+  }
+}
+
+// Button Simple
+
+.btn-small {
+  @extend %btn;
+  background-color: $red;
+  border: none;
+  margin-top: calculateRem(10px);
+  padding: calculateRem(5px) calculateRem(10px);
+  color: $white;
+  font: 400 calculateRem(14px) $serif;
+  border: 1px solid transparent;
+  text-shadow: 2px 2px 2px black(.9);
+  &:hover, 
+  .selected {
+    background-color: darken($red, 9%);
+  }
+}
+// Tiny Button
+.btn-tiny {
+  cursor: pointer;
+  position: absolute;
+  color: $red;
+  //border: none;
+
+  //top: 0px;
+  padding: calculateRem(20px) 0 0 calculateRem(20px);
+  font-size: calculateRem(30px);
+  border: 1px solid transparent;
+  &:hover, 
+  &:active {
+    color: darken($red, 9%);
+  }
+}
+
+
+// Default Button
+
+.btn-default {
+  @extend %btn;
+  background-color: $red;
+  color: $white;
+  font: bold calculateRem(18px) $sans-serif;
+  padding: calculateRem(10px) calculateRem(60px);
+  line-height: calculateRem(45px);
+	@include transition(all 0.5s);
+	position: relative;
+	overflow: hidden;
+  width: auto;
+  z-index: 0;
+  margin: 0 auto;
+  &:hover,
+  &:focus {
+    @include transform(translate(0, 0));
+
+    &:after {
+      @include opacity(1);
+      @include transform( translate(0, 0));
+    }
+  }
+
+  &.raised {
+    @include transition(all 0.1s);
+    background-color: $red;
+  }
+  .anim {
+    @include transform(translateY(-50%) translateX(-50%));
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+
+    &:before {
+      position: relative;
+      content: '';
+      display: block;
+      margin-top: 100%;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      border-radius: 50%;
+    }
+  }      
+}

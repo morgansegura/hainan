@@ -1,0 +1,29 @@
+/*
+  Stylesheet: Variables
+*/
+
+/* COLORS */
+
+$alert-yellow:      #ebe16f;
+$alert-red:         #fbe3e4;
+$alert-green:       #e6efc2;
+$alert-blue:        #d5edf8;
+
+$black:             #000;
+$white:             #fff;
+
+$light-gray:        #ecf0f1;
+$gray:              #a9acad;
+$text-color:        $black;
+$meta-gray:         #a0a3a4;
+$charcoal:          #2b2b2b;
+
+/* Base Colors */
+$red:               #cc0000;
+$tan:               #bcbcbc;
+
+$link-color:        $red;
+$link-hover:        darken($link-color, 9%);
+
+$border-color:      #ccc;
+$disabled-gray:     #cfcfcf;

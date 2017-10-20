@@ -1,0 +1,192 @@
+/*
+  Site Name: DNA Custom Painting
+  Author: Morgan Segura
+  Stylesheet: Mixins
+*/
+
+/* Transition */
+
+@mixin transition($transition...) {
+  $prefixes: ("-webkit-", "-moz-", "-o-", "-ms-", "" );
+  @each $prefix in $prefixes {
+    #{$prefix}transition: $transition;
+  }
+}
+
+/* Transform */
+
+@mixin transform($transform...) {
+  $prefixes: ("-webkit-", "-moz-", "-o-", "-ms-", "" );
+  @each $prefix in $prefixes {
+    #{$prefix}transform: $transform;
+  }
+}
+
+/* Animate */
+
+/************************************
+
+USEAGE:
+
+	@include keyframes(slide-down) {
+		0% { opacity: 1; }
+		90% { opacity: 0; }
+	}
+
+	.element {
+		@include animation('slide-down 5s 3');
+	}
+
+************************************/
+
+@mixin keyframes($animation-name) {
+	@-webkit-keyframes #{$animation-name} {
+			@content;
+	}
+	@-moz-keyframes #{$animation-name} {
+			@content;
+	}  
+	@-ms-keyframes #{$animation-name} {
+			@content;
+	}
+	@-o-keyframes #{$animation-name} {
+			@content;
+	}  
+	@keyframes #{$animation-name} {
+			@content;
+	}
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};      
+}
+
+/* Graditents */
+
+@mixin css-gradient($from: #dfdfdf, $to: #f8f8f8) {
+	background-color: $to;
+	background-image: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
+	background-image: -webkit-linear-gradient(top, $from, $to);
+	background-image: -moz-linear-gradient(top, $from, $to);
+	background-image: -o-linear-gradient(top, $from, $to);
+	background-image: linear-gradient(to bottom, $from, $to);
+}
+
+/* Box Sizing */
+
+@mixin box-sizing($type: border-box) {
+	-webkit-box-sizing: $type;
+	-moz-box-sizing:    $type;
+	-ms-box-sizing:     $type;
+	box-sizing:         $type;
+}
+
+/* Border Radius */
+
+@mixin border-radius($radius...) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius:    $radius;
+	-ms-border-radius:     $radius;
+	-o-border-radius:      $radius;
+	border-radius:         $radius;
+}
+
+/* Border Radius */
+
+@mixin box-shadow($options...) {
+	-webkit-box-shadow: $options;
+	-moz-box-shadow: 		$options;
+			 box-shadow: 		$options;
+}
+
+/* Opacity */
+
+@mixin opacity($trans) {
+  filter: alpha(opactiy=($trans * 100));
+  -ms-filter: 		"progid:DXImageTransform.Microsoft.Alpha(Opactiy=#{$trans * 100})";
+  -moz-opacity: 	$trans;
+  -khtml-opacity: $trans;
+  opacity: 				$trans;
+}
+
+/* Opacity */
+
+@mixin centerer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  @include transform(translate(-50%, -50%));
+}
+
+
+/* Calculate REM size */
+// @include font-size(14px);
+
+@mixin font-size($size) {
+	font-size: $size;
+	font-size: calculateRem($size);
+}
+
+/* Flexbox */
+
+// simple flexbox setup
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+// flex with values (shorthand)
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+  -moz-box-flex:  $values;
+  -webkit-flex:  $values;
+  -ms-flex:  $values;
+  flex:  $values;
+}
+
+@mixin order($val) {
+  -webkit-box-ordinal-group: $val;  
+  -moz-box-ordinal-group: $val;     
+  -ms-flex-order: $val;     
+  -webkit-order: $val;  
+  order: $val;
+}
+
+@mixin flex-verticle() {
+	-webkit-box-orient: vertical;
+	-moz-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-moz-box-direction: normal;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
+
+/* 
+http://webdesignerwall.com/tutorials/master-css-flexbox-5-simple-steps
+
+flex-flow: flex-direction | flex-wrap;
+
+flex-direction: row | row-reverse | column | column-reverse;
+
+flex-wrap: nowrap | wrap | wrap-reverse;
+
+justify-content: flex-start | flex-end | center | space-between | space-around;
+
+align-items: flex-start | flex-end | center | baseline | stretch; 
+
+align-content: flex-start | flex-end | center | space-between | space-around | stretch
+
+flex: flex-grow || flex-shrink || flex-basis;
+
+align-self: auto | flex-start | flex-end | center | baseline | stretch
+
+order: number;
+
+*/

@@ -1,0 +1,908 @@
+/*
+  Site Name: Hai Nan Chinese Restaurants
+  Author: Morgan Segura
+  Stylesheet: Main
+*/
+/*
+  Site Name: DNA Custom Painting
+  Author: Morgan Segura
+  Stylesheet: Reset
+*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css?family=Artifika|Tangerine:400,700|Noto+Sans:400,700");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*
+  Stylesheet: Variables
+*/
+/* COLORS */
+/* Base Colors */
+/*
+  Stylesheet: Typography
+*/
+p {
+  -ms-word-wrap: break-word;
+  word-break: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+  -webkit-hyphenate-before: 2;
+  -webkit-hyphenate-after: 3;
+  hyphenate-lines: 3;
+  -webkit-font-feature-settings: "liga", "dlig";
+  -moz-font-feature-settings: "liga=1, dlig=1";
+  -ms-font-feature-settings: "liga", "dlig";
+  -o-font-feature-settings: "liga", "dlig";
+  font-feature-settings: "liga", "dlig"; }
+
+/*
+  Site Name: DNA Custom Painting
+  Author: Morgan Segura
+  Stylesheet: Functions
+*/
+/* COLOR FUNCTIONS */
+/* Calculate Rem Size */
+/*
+  Site Name: DNA Custom Painting
+  Author: Morgan Segura
+  Stylesheet: Mixins
+*/
+/* Transition */
+/* Transform */
+/* Animate */
+/************************************
+
+USEAGE:
+
+	@include keyframes(slide-down) {
+		0% { opacity: 1; }
+		90% { opacity: 0; }
+	}
+
+	.element {
+		@include animation('slide-down 5s 3');
+	}
+
+************************************/
+/* Graditents */
+/* Box Sizing */
+/* Border Radius */
+/* Border Radius */
+/* Opacity */
+/* Opacity */
+/* Calculate REM size */
+/* Flexbox */
+/* 
+http://webdesignerwall.com/tutorials/master-css-flexbox-5-simple-steps
+
+flex-flow: flex-direction | flex-wrap;
+
+flex-direction: row | row-reverse | column | column-reverse;
+
+flex-wrap: nowrap | wrap | wrap-reverse;
+
+justify-content: flex-start | flex-end | center | space-between | space-around;
+
+align-items: flex-start | flex-end | center | baseline | stretch; 
+
+align-content: flex-start | flex-end | center | space-between | space-around | stretch
+
+flex: flex-grow || flex-shrink || flex-basis;
+
+align-self: auto | flex-start | flex-end | center | baseline | stretch
+
+order: number;
+
+*/
+/*
+  Stylesheet: Buttons
+*/
+.btn-small, .btn-default {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  font-weight: normal;
+  border: 0;
+  cursor: pointer;
+  -webkit-transition: all 0.14s ease-in-out;
+  -moz-transition: all 0.14s ease-in-out;
+  -o-transition: all 0.14s ease-in-out;
+  -ms-transition: all 0.14s ease-in-out;
+  transition: all 0.14s ease-in-out;
+  -webkit-border-radius: 0.3125rem;
+  -moz-border-radius: 0.3125rem;
+  -ms-border-radius: 0.3125rem;
+  -o-border-radius: 0.3125rem;
+  border-radius: 0.3125rem; }
+  .btn-small:hover, .btn-default:hover, .btn-small:focus, .btn-default:focus {
+    text-decoration: none;
+    outline: none; }
+  .btn-small:active, .btn-default:active {
+    top: 0.0625rem; }
+
+.btn-small {
+  background-color: #cc0000;
+  border: none;
+  margin-top: 0.625rem;
+  padding: 0.3125rem 0.625rem;
+  color: #fff;
+  font: 400 0.875rem "Artifika", "Georgia", Cambria, Times New Roman, Times, serif;
+  border: 1px solid transparent;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9); }
+  .btn-small:hover,
+  .btn-small .selected {
+    background-color: #9e0000; }
+
+.btn-tiny {
+  cursor: pointer;
+  position: absolute;
+  color: #cc0000;
+  padding: 1.25rem 0 0 1.25rem;
+  font-size: 1.875rem;
+  border: 1px solid transparent; }
+  .btn-tiny:hover, .btn-tiny:active {
+    color: #9e0000; }
+
+.btn-default {
+  background-color: #cc0000;
+  color: #fff;
+  font: bold 1.125rem "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 0.625rem 3.75rem;
+  line-height: 2.8125rem;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s;
+  position: relative;
+  overflow: hidden;
+  width: auto;
+  z-index: 0;
+  margin: 0 auto; }
+  .btn-default:hover, .btn-default:focus {
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0); }
+    .btn-default:hover:after, .btn-default:focus:after {
+      filter: alpha(opactiy=100);
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opactiy=100)";
+      -moz-opacity: 1;
+      -khtml-opacity: 1;
+      opacity: 1;
+      -webkit-transform: translate(0, 0);
+      -moz-transform: translate(0, 0);
+      -o-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+      transform: translate(0, 0); }
+  .btn-default.raised {
+    -webkit-transition: all 0.1s;
+    -moz-transition: all 0.1s;
+    -o-transition: all 0.1s;
+    -ms-transition: all 0.1s;
+    transition: all 0.1s;
+    background-color: #cc0000; }
+  .btn-default .anim {
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    -moz-transform: translateY(-50%) translateX(-50%);
+    -o-transform: translateY(-50%) translateX(-50%);
+    -ms-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -1; }
+    .btn-default .anim:before {
+      position: relative;
+      content: '';
+      display: block;
+      margin-top: 100%; }
+    .btn-default .anim:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      border-radius: 50%; }
+
+/* Defaults */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+html {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  -ms-box-sizing: inherit;
+  box-sizing: inherit; }
+
+body {
+  position: relative;
+  font: normal 1.125rem "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #000;
+  line-height: 2; }
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0; }
+  h1:before, h1:after, h2:before, h2:after, h3:before, h3:after, h4:before, h4:after, h5:before, h5:after, h6:before, h6:after, p:before, p:after {
+    margin: 0;
+    padding: 0; }
+
+ul,
+nav {
+  list-style: none; }
+
+a {
+  display: inline-block;
+  color: #cc0000;
+  font-weight: 700;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+  a:hover {
+    color: #990000; }
+
+/* Typography */
+h1 {
+  font: 700 5rem "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+h2 {
+  font: 700 3.125rem "Tangerine", cursive; }
+
+h3 {
+  font: 700 2.1875rem "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+h4 {
+  font: 700 3.75rem "Tangerine", cursive;
+  text-align: center; }
+
+h5 {
+  font: 400 1.25rem "Artifika", "Georgia", Cambria, Times New Roman, Times, serif;
+  text-align: center;
+  padding: 1.125rem 0 2.5rem; }
+
+p {
+  font: 400 1.125rem "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+.line {
+  height: 0.0625rem;
+  background-color: #ecf0f1;
+  margin: 1.25rem 0;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+
+strong {
+  font-weight: 600;
+  color: #990000; }
+
+hr {
+  background-color: #cc0000;
+  border: none;
+  width: 40%;
+  height: 0.0625rem;
+  margin: 1.25rem auto; }
+
+/* Reusable Blocks */
+section {
+  z-index: 0; }
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 72.8125rem;
+  padding: 5.625rem 0; }
+
+.flexible {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: space-around; }
+
+.sans {
+  font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+.serif {
+  font-family: "Artifika", "Georgia", Cambria, Times New Roman, Times, serif; }
+
+.image-grid {
+  background-color: #cc0000;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: block;
+  filter: alpha(opactiy=100);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opactiy=100)";
+  -moz-opacity: 1;
+  -khtml-opacity: 1;
+  opacity: 1;
+  animation: 1s fadein 0.5s forwards;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+  .image-grid .grid-hover {
+    position: absolute;
+    display: inline;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 2;
+    max-width: 18.3125rem;
+    width: 82%;
+    max-height: 19.0625rem;
+    height: 74%;
+    top: 0;
+    left: 0;
+    padding: 10%;
+    margin: 14% 8%;
+    text-align: center;
+    color: #fff;
+    filter: alpha(opactiy=0);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opactiy=0)";
+    -moz-opacity: 0;
+    -khtml-opacity: 0;
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+    .image-grid .grid-hover p:first-child {
+      margin-top: 8%; }
+    .image-grid .grid-hover .price {
+      font-size: 1.875rem;
+      margin: 0.3125rem auto; }
+    .image-grid .grid-hover .btn-small {
+      margin: 0 auto; }
+  .image-grid .grid-image {
+    position: relative;
+    max-width: 18.3125rem;
+    max-height: 19.0625rem;
+    overflow: hidden; }
+    .image-grid .grid-image img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      background-size: cover; }
+  .image-grid:hover .grid-hover {
+    filter: alpha(opactiy=100);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opactiy=100)";
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+    opacity: 1;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    padding: 10%; }
+
+.background-image {
+  content: "";
+  position: absolute;
+  background-position: 0 0;
+  background-attachment: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  filter: alpha(opactiy=50);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opactiy=50)";
+  -moz-opacity: 0.5;
+  -khtml-opacity: 0.5;
+  opacity: 0.5;
+  z-index: -1;
+  background-color: #000;
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  animation: 1s slidefade 1s forwards;
+  transform: scale(1); }
+
+.info-block {
+  background-color: #fff;
+  padding: 0.625rem 0;
+  color: rgba(0, 0, 0, 0.4);
+  font-weight: bold; }
+  .info-block .social i:first-child {
+    padding-left: 10px; }
+
+.f-center {
+  text-align: center; }
+
+/* Header Styles */
+header {
+  width: 100%;
+  position: fixed;
+  left: 50%;
+  z-index: 1;
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  animation: 1s fadein 0.5s forwards;
+  filter: alpha(opactiy=0);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opactiy=0)";
+  -moz-opacity: 0;
+  -khtml-opacity: 0;
+  opacity: 0; }
+  header .logo {
+    margin-top: -1.25rem;
+    color: red;
+    text-align: center; }
+    header .logo span {
+      font: 700 1.25rem "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      display: block;
+      text-transform: uppercase; }
+    header .logo img {
+      position: relative;
+      top: 0.3125rem;
+      width: 1.9375rem; }
+  header nav {
+    background-color: rgba(0, 0, 0, 0.7); }
+    header nav a {
+      padding: 0.625rem 0;
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      -ms-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out; }
+      header nav a:hover {
+        color: #fff; }
+
+/* Hero Styles */
+.hero {
+  position: relative;
+  text-align: left;
+  min-height: 100vh;
+  color: #000;
+  animation: 1s slidefade 1s forwards;
+  padding-top: 9.375rem;
+  overflow: hidden; }
+  .hero h1 {
+    color: #cc0000;
+    text-align: center;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+    padding-top: 20%;
+    padding-bottom: 0; }
+  .hero h3.slogan {
+    color: white;
+    padding: 0.5rem 0.9375rem;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.5); }
+  .hero h3.second {
+    color: #fff;
+    display: none;
+    text-transform: uppercase;
+    padding: 0.5rem 0.9375rem;
+    position: relative;
+    top: -12px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.5); }
+  .hero .btn-default {
+    margin: 10% auto;
+    width: auto; }
+
+/* Menu Section */
+.full-menu {
+  position: relative;
+  min-height: 100vh;
+  color: #000;
+  animation: 1s slidefade 1s forwards;
+  padding-top: 9.375rem;
+  filter: alpha(opactiy=30);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opactiy=30)";
+  -moz-opacity: 0.3;
+  -khtml-opacity: 0.3;
+  opacity: 0.3;
+  overflow: hidden; }
+  .full-menu h4 {
+    margin-bottom: 0.3125rem;
+    color: #cc0000; }
+  .full-menu .menu-nav li p {
+    cursor: pointer;
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: #cc0000;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 0.3125rem 0.3125rem; }
+  .full-menu .items p,
+  .full-menu .bordered p {
+    font-family: "Artifika", "Georgia", Cambria, Times New Roman, Times, serif;
+    line-height: 1.7; }
+  .full-menu .dinner-entrees,
+  .full-menu .beverages-desserts,
+  .full-menu .family-dinners,
+  .full-menu .vegetarian,
+  .full-menu .individual-items {
+    justify-content: space-between; }
+  .full-menu .side-note {
+    padding: 0 0 0.625rem;
+    font-size: 0.9375rem;
+    color: #a0a3a4;
+    font-family: "Artifika", "Georgia", Cambria, Times New Roman, Times, serif;
+    font-style: italic; }
+  .full-menu .items {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between; }
+    .full-menu .items.full > li {
+      margin: 0 auto;
+      width: 70%; }
+    .full-menu .items.pricing {
+      margin-top: 0.9375rem; }
+      .full-menu .items.pricing p {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        align-items: center;
+        justify-content: space-between; }
+        .full-menu .items.pricing p span:first-child {
+          margin-right: 1.875rem; }
+  .full-menu .intro {
+    text-align: center;
+    margin-bottom: 1.875rem; }
+  .full-menu .border {
+    border-image: url(../img/border.png) 25 25 round; }
+  .full-menu .white-wrap {
+    background-color: #fff;
+    margin: 1.875rem auto;
+    display: block;
+    width: 80%;
+    padding: 5%; }
+  .full-menu .spicy {
+    width: 1.25rem;
+    height: 1.25rem;
+    display: inline-block;
+    background: transparent url(../img/pepper.png) 0 0 no-repeat;
+    background-size: 1.25rem 1.25rem;
+    background-position: 0 0;
+    position: relative;
+    top: 0.3125rem;
+    /*
+        left: calculateRem(-20px);
+        margin-right: calculateRem(-20px)
+        */ }
+
+/* Footer Section */
+footer {
+  background-color: #2b2b2b;
+  color: #fff;
+  padding: 0;
+  margin: 0; }
+  footer h4 {
+    display: block;
+    width: 100%;
+    background-color: #cc0000;
+    padding: 1.875rem 0;
+    font-size: 1.875rem;
+    text-align: center; }
+  footer .footer-content {
+    padding: 3.125rem 0;
+    text-align: center; }
+    footer .footer-content h5 {
+      font: 700 2.5rem "Tangerine", cursive;
+      padding: 0;
+      line-height: 1.4;
+      margin-bottom: 1.25rem;
+      border-bottom: 0.125rem solid #cc0000; }
+    footer .footer-content .days {
+      font-family: "Artifika", "Georgia", Cambria, Times New Roman, Times, serif;
+      font-weight: 700;
+      padding-bottom: 0.3125rem; }
+      footer .footer-content .days.extra {
+        padding-bottom: 1.25rem; }
+    footer .footer-content .time {
+      font-size: 1rem;
+      line-height: 1.7; }
+    footer .footer-content .working-hours .time {
+      padding-bottom: 1.25rem; }
+
+.anim {
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  -moz-transform: translateY(-50%) translateX(-50%);
+  -o-transform: translateY(-50%) translateX(-50%);
+  -ms-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1; }
+  .anim:before {
+    position: relative;
+    content: '';
+    display: block;
+    margin-top: 100%; }
+  .anim:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 50%; }
+
+.clickable .toggle:checked + .anim {
+  -webkit-animation: anim-in 0.75s;
+  -moz-animation: anim-in 0.75s;
+  -ms-animation: anim-in 0.75s;
+  -o-animation: anim-in 0.75s;
+  animation: anim-in 0.75s; }
+
+.clickable .toggle:checked + .anim:after {
+  -webkit-animation: anim-in-pseudo 0.75s;
+  -moz-animation: anim-in-pseudo 0.75s;
+  -ms-animation: anim-in-pseudo 0.75s;
+  -o-animation: anim-in-pseudo 0.75s;
+  animation: anim-in-pseudo 0.75s; }
+
+.clickable .toggle:not(:checked) + .anim {
+  -webkit-animation: anim-out 0.75s;
+  -moz-animation: anim-out 0.75s;
+  -ms-animation: anim-out 0.75s;
+  -o-animation: anim-out 0.75s;
+  animation: anim-out 0.75s; }
+
+.clickable .toggle:not(:checked) + .anim:after {
+  -webkit-animation: anim-out-pseudo 0.75s;
+  -moz-animation: anim-out-pseudo 0.75s;
+  -ms-animation: anim-out-pseudo 0.75s;
+  -o-animation: anim-out-pseudo 0.75s;
+  animation: anim-out-pseudo 0.75s; }
+
+.hoverable:hover > .anim {
+  -webkit-animation: anim-out 0.75s;
+  -moz-animation: anim-out 0.75s;
+  -ms-animation: anim-out 0.75s;
+  -o-animation: anim-out 0.75s;
+  animation: anim-out 0.75s; }
+
+.hoverable:hover > .anim:after {
+  -webkit-animation: anim-out-pseudo 0.75s;
+  -moz-animation: anim-out-pseudo 0.75s;
+  -ms-animation: anim-out-pseudo 0.75s;
+  -o-animation: anim-out-pseudo 0.75s;
+  animation: anim-out-pseudo 0.75s; }
+
+@-webkit-keyframes anim-in {
+  0% {
+    width: 0; }
+  100% {
+    width: 100%; } }
+
+@-moz-keyframes anim-in {
+  0% {
+    width: 0; }
+  100% {
+    width: 100%; } }
+
+@-ms-keyframes anim-in {
+  0% {
+    width: 0; }
+  100% {
+    width: 100%; } }
+
+@-o-keyframes anim-in {
+  0% {
+    width: 0; }
+  100% {
+    width: 100%; } }
+
+@keyframes anim-in {
+  0% {
+    width: 0; }
+  100% {
+    width: 100%; } }
+
+@-webkit-keyframes anim-in-pseudo {
+  0% {
+    background: rgba(0, 0, 0, 0.25); }
+  100% {
+    background: transparent; } }
+
+@-moz-keyframes anim-in-pseudo {
+  0% {
+    background: rgba(0, 0, 0, 0.25); }
+  100% {
+    background: transparent; } }
+
+@-ms-keyframes anim-in-pseudo {
+  0% {
+    background: rgba(0, 0, 0, 0.25); }
+  100% {
+    background: transparent; } }
+
+@-o-keyframes anim-in-pseudo {
+  0% {
+    background: rgba(0, 0, 0, 0.25); }
+  100% {
+    background: transparent; } }
+
+@keyframes anim-in-pseudo {
+  0% {
+    background: rgba(0, 0, 0, 0.25); }
+  100% {
+    background: transparent; } }
+
+@-webkit-keyframes anim-out {
+  0% {
+    width: 0; }
+  100% {
+    width: 100%; } }
+
+@-moz-keyframes anim-out {
+  0% {
+    width: 0; }
+  100% {
+    width: 100%; } }
+
+@-ms-keyframes anim-out {
+  0% {
+    width: 0; }
+  100% {
+    width: 100%; } }
+
+@-o-keyframes anim-out {
+  0% {
+    width: 0; }
+  100% {
+    width: 100%; } }
+
+@keyframes anim-out {
+  0% {
+    width: 0; }
+  100% {
+    width: 100%; } }
+
+@-webkit-keyframes anim-out-pseudo {
+  0% {
+    background: rgba(0, 0, 0, 0.25); }
+  100% {
+    background: transparent; } }
+
+@-moz-keyframes anim-out-pseudo {
+  0% {
+    background: rgba(0, 0, 0, 0.25); }
+  100% {
+    background: transparent; } }
+
+@-ms-keyframes anim-out-pseudo {
+  0% {
+    background: rgba(0, 0, 0, 0.25); }
+  100% {
+    background: transparent; } }
+
+@-o-keyframes anim-out-pseudo {
+  0% {
+    background: rgba(0, 0, 0, 0.25); }
+  100% {
+    background: transparent; } }
+
+@keyframes anim-out-pseudo {
+  0% {
+    background: rgba(0, 0, 0, 0.25); }
+  100% {
+    background: transparent; } }
+
+@keyframes fadein {
+  100% {
+    filter: alpha(opactiy=100);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opactiy=100)";
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+    opacity: 1; } }
+
+@keyframes slidefade {
+  100% {
+    opacity: 1;
+    margin-top: 0; } }
+
+/*
+  Site Name: DNA Custom Painting
+  Author: Morgan Segura
+  Stylesheet: Media Queries
+*/
+@media all and (max-width: 800px) {
+  /* Header */
+  /* Section */
+  /* Hero Section */ }
+
+@media all and (max-width: 1024px) {
+  .hero {
+    /*
+        .container {
+            text-align: center;
+            flex-flow: row wrap;
+            padding: calculateRem(20px);
+            h1 {
+                padding-right: 0;
+            }
+            h3 {
+                margin-bottom: calculateRem(20px);
+            }
+            .img {
+                margin: 0 auto;
+                order: -1;
+            }
+            img {
+                width: 100%;
+            }
+        }
+        div.social {
+            position: relative;
+            padding: 0;
+        }
+        */ }
+  /* Footer */ }
